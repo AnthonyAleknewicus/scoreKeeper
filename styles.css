@@ -5,3 +5,11 @@
 img {
     width: 300px;
 }
+
+.winner {
+    color: green;
+}
+
+.loser {
+    color: red;
+}
