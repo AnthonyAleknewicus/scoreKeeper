@@ -15,7 +15,7 @@ const p2 = {
 const resetBtn = document.querySelector('#reset');
 const winningScoreSelect = document.querySelector('#playTo');
 
-// setting variables to initialize a false 'Game Over' and that the game is defaulted to a winning score of '3' to align with the winningScoreSelect variable whose first option is also '3'
+// setting variables to initialize isGameOver to 'false' and to default the game to a winning score of '3' to align with the winningScoreSelect variable whose first option is also '3'
 let winningScore = 3;
 let isGameOver = false;
 
@@ -44,13 +44,17 @@ p2.button.addEventListener('click', function () {
     updateScores(p2, p1);
 });
 
+
+// the event listener that sets the winning score from the 'Playing To' menu in the HTML Doc
 winningScoreSelect.addEventListener('change', function () {
     winningScore = parseInt(this.value);
     resetGame()
 })
 
+// the event listener that listens for the 'reset' button and calls upon the resetGame function
 resetBtn.addEventListener('click', resetGame)
 
+// this function resets the scorekeeper by setting isGameOver to 'false', and then looping through the player and opponents scores, display, and buttons, setting them back to the default, and removing the 'winner' (has-text-success) and 'loser' (has-text-danger) status classes.
 function resetGame() {
     isGameOver = false;
     for (let p of [p1,p2]){
