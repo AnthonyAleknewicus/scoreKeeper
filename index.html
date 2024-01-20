@@ -4,26 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Score Keeper</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 
 <body>
-    <h1><span id="p1Display">0</span> to <span id="p2Display">0</span></h1>
 
-    <select name="playTo" id="playTo">
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-    </select>
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter">
+                    <div class="card">
 
-    <button id="p1Button">Player 1: +1</button>
-    <button id="p2Button">Player 2: +1</button>
-    <button id="reset">Reset</button>
+                        <!-- Image Section -->
+                        <div class="card-image">
+                            <figure class="image is-2by1">
+                                <img src="./img/Ping Pong Paddles.jpeg" alt="">
+                            </figure>
+                        </div>
+    
+                        <!-- Header Section -->
+                        <header class="card-header">
+                            <p class="card-header-title is-centered">
+                                Tony's Multi-Faceted Scorekeeper
+                            </p>
+                        </header>
+    
+                        <!-- Content Section -->
+                        <div class="card-content">
+                        <div class="content">
+                            <h1 class="title is-1"><span id="p1Display">0</span> to <span id="p2Display">0</span></h1> <br>
+                            <p class="subtitle is-6 has-text-info-dark">Use the Buttons Below to Keep Score</p>  
+                            <label for="playTo" class="label is-large is-inline">Playing To:</label>
+                            <div class="select is-rounded">
+                                <select name="playTo" id="playTo">
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                        </div>
+                        </div>
+
+                        <!-- Button Section -->
+                        <footer class="card-footer">
+                            <button class="is-primary button card-footer-item" id="p1Button">Player One: +1</button>
+                            <button class="is-info button card-footer-item" id="p2Button">Player Two: +1</button>
+                            <button class="is-danger button card-footer-item" id="reset">Reset</button>
+                        
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="app.js"></script>
 </body>
